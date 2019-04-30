@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Infra\Setup\CodigosPostais.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Infra\Setup\CodigosPostais.csv" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.4" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\rfmagalhaes.aspnetcoreweb_efcore.infra.data\rfmagalhaes.aspnetcoreweb_efcore.infra.data.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Infra\Data\" />
+  </ItemGroup>
+
+</Project>
